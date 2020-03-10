@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="index.css")
+    title Accordion in Vanilla JavaScript
+  body
+
+    section
+      .section__container
+        h1.section__container-title faq
+
+        ul.section__container-navList
+          each val, index in [{question: 'Langues utilisées', reponse: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa fuga facilis nulla harum. Accusantium rerum culpa necessitatibus earum autem laboriosam.'}, {question: 'Comment ça fonctionne', reponse: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa fuga facilis nulla harum. Accusantium rerum culpa necessitatibus earum autem laboriosam.'}, {question: 'Points d\'interêts', reponse: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa fuga facilis nulla harum. Accusantium rerum culpa necessitatibus earum autem laboriosam.'}] 
+            li.section__container-navItem
+              h2.section__container-navTitle= val.question
+              div.section__container-navText 
+                p= val.reponse
+
+
+
+
+
+    script(src="index.js")

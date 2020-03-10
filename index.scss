@@ -1,0 +1,117 @@
+$white: rgba(254,255,250,1);
+$grey: rgba(220,231,235,1);
+$red: rgba(255,104,115,1);
+$black: rgba(48,69,92,0.8);
+
+
+* {margin:0;
+  padding:0;
+  box-sizing:border-box;
+  list-style: none;
+  font-family:'circular std', sans-serif;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+ }
+
+
+ section{
+
+
+  .section__container {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 15px 30px;
+    border-top: 5px solid $red;
+
+    h1 {
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 40px;
+      line-height: 42px;
+      letter-spacing: 3px;
+      font-weight: 600;
+      color: $red;
+      margin: .47em 0;
+    }
+
+    .section__container-navList {
+      transition: all 480ms;
+
+      .section__container-navItem { //li
+
+        position: relative;
+        padding: 0;
+        margin: 0;
+        padding-bottom: 4px;
+        padding-top: 18px;
+        border-bottom: 1px solid $grey;
+        transition: all 480ms;
+
+        &.is-active h2 {
+          color: $red;
+        }
+
+        &.is-active h2:before {
+          transform: translate(-2px, 0) rotate(-45deg);
+          
+        }
+
+        &.is-active h2:after {
+          transform: translate(2px, 0) rotate(45deg);
+        }
+
+        .section__container-navTitle { //h2
+          font-size: 26px;
+          line-height: 34px;
+          font-weight: 300;
+          letter-spacing: 1px;
+          margin: 0;
+          padding: .27em 0;
+          cursor: pointer;
+          position: relative;
+
+          &:before, &:after {
+            content: "";
+            position: absolute;
+            background-color: #ff6873;
+            width: 3px;
+            height: 9px;
+            transform: translate(-6px, 0);
+            margin-top: 16px;
+            right: 20px;
+            transform: 480ms;
+          }
+
+          &:before {
+            transform: translate(-2px, 0) rotate(45deg);
+            transform: all 480ms;
+          }
+
+          &:after {
+            transform: translate(2px, 0) rotate(-45deg);
+            
+          }
+
+        }
+
+        .section__container-navText {
+          padding: .67em 0;
+          font-size: 17px;
+          line-height: 26px;
+          letter-spacing: 1px;
+          opacity: 0;
+          overflow: hidden;
+          height: 0;
+          transform: all ease-in-out .5s;
+
+          &.is-active {
+            opacity: 1;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+ }
